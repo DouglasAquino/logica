@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Exercício 1.2 - Satisfação</title>
+    <script type='text/javascript' src='javascript/logica.js'></script>
+    <script type='text/javascript'  src="javascript/text1.js"></script>
+  </head>
+
+  <body style='background-color:#93c9ff'>
+    <center>
+      <table width="1000" cellpadding="40" bgcolor="#ffffff">
+        <tr>
+          <td>
+            <center>
+              <span style="font-size:36px">Introdução à Lógica</span>
+            </center>
+            <br>
+
+            <center>
+              <table width="900" cellspacing="0" cellpadding="10" bgcolor="#93c9ff" border="1">
+                <tbody>
+                  <tr><td align="center" style="font-size:19px">Exercício 1.2 - Avaliação</td></tr>
+                </tbody>
+              </table>
+            </center>
+
+            <br>
+            <center>
+              <table width="900" cellspacing="0" cellpadding="0" border="0">
+                <tbody>
+                  <tr>
+                    <td>
+                      <p>Este problema diz respeito às relações interpessoais de uma pequena fraternidade.
+                        Existem apenas quatro membros - Anna, Carol, Giu e Natanna; e há apenas um tipo de relacionamento binário - curtidas.
+                        A tabela a seguir mostra quem gosta de quem. Uma marca em uma caixa da tabela indica que a garota nomeada no início da linha gosta da garota nomeada no cabeçalho da coluna;
+                        a ausência de um cheque significa que ela não o faz. Você pode adicionar um relacionamento clicando em um dos quadrados vazios da mesa; 
+                        você pode remover um relacionamento clicando em um quadrado marcado.
+                      </p>
+
+                      <center>
+                        <table cellspacing="0" border="1" bgcolor="#FFF0F5">
+                          <tbody>
+                              <tr height="50" style="background-color:#93c9ff" align="center">
+                                <th width="50"><img src="images/meninas.png"></th>
+                                <th width="50">Anna</th>
+                                <th width="50">Carol</th>
+                                <th width="50">Giu</th>
+                                <th width="50">Natanna</th>
+                              </tr>
+                              <tr height="50" align="center">
+                                  <th style="background-color:#93c9ff">Anna</th>
+                                  <td id='aa' align='center' valign='center' onClick='togglesquare(this)'>&nbsp;</td>
+                                  <td id='ab' align='center' valign='center' onClick='togglesquare(this)'>&nbsp;</td>
+                                  <td id='ac' align='center' valign='center' onClick='togglesquare(this)'>&nbsp;</td>
+                                  <td id='ad' align='center' valign='center' onClick='togglesquare(this)'>&nbsp;</td>
+                              </tr>
+                              <tr height="50" align="center">
+                                  <th style="background-color:#93c9ff">Carol</th>
+                                  <td id='ba' align='center' valign='center' onClick='togglesquare(this)'>&nbsp;</td>
+                                  <td id='bb' align='center' valign='center' onClick='togglesquare(this)'>&nbsp;</td>
+                                  <td id='bc' align='center' valign='center' onClick='togglesquare(this)'>&nbsp;</td>
+                                  <td id='bd' align='center' valign='center' onClick='togglesquare(this)'>&nbsp;</td>
+                              </tr>
+                              <tr height="50" align="center">
+                                  <th style="background-color:#93c9ff">Giu</th>
+                                  <td id='ca' align='center' valign='center' onClick='togglesquare(this)'>&nbsp;</td>
+                                  <td id='cb' align='center' valign='center' onClick='togglesquare(this)'>&nbsp;</td>
+                                  <td id='cc' align='center' valign='center' onClick='togglesquare(this)'>&nbsp;</td>
+                                  <td id='cd' align='center' valign='center' onClick='togglesquare(this)'>&nbsp;</td>
+                              </tr>
+                              <tr height="50" align="center">
+                                  <th style="background-color:#93c9ff">Natanna</th>
+                                  <td id='da' align='center' valign='center' onClick='togglesquare(this)'>&nbsp;</td>
+                                  <td id='db' align='center' valign='center' onClick='togglesquare(this)'>&nbsp;</td>
+                                  <td id='dc' align='center' valign='center' onClick='togglesquare(this)'>&nbsp;</td>
+                                  <td id='dd' align='center' valign='center' onClick='togglesquare(this)'>&nbsp;</td>
+                              </tr>
+                          </tbody>
+                        </table>
+                      </center>
+
+                      <p style='margin:10px'>As frases da tabela abaixo descrevem alguns relacionamentos entre as meninas, 
+                        com uma indicação se são verdadeiras ou falsas no mundo retratado na primeira tabela. 
+                        Conforme você muda o mundo, os valores verdade dessas sentenças são recalculados e exibidos nesta tabela</p>
+
+                      <center>
+                        <table id='theory' cellspacing='0' cellpadding='3' border='1' bgcolor="#FFF0F5">
+                          <tr style="background-color:#93c9ff" align='center'>
+                            <th>Sentença</th>
+                            <th style='display:none'<th></th>
+                            <th>Valor verdade</th>
+                          </tr>
+                          <tr>
+                            <td><i>Natanna gosta de Giu.</i></td>
+                            <td style='display:none'>likes(natanna,giu)</td>
+                            <td id='1g' align='center'><img src="images/newredex.jpg"/></td>
+                          </tr>
+                          <tr>
+                            <td><i>Anna não gosta de Natanna.</td>
+                            <td style='display:none'>~likes(anna,natanna)</td>
+                            <td id='2g' align='center'><img src="images/newgreencheck.jpg"/></td>
+                          </tr>
+                          <tr>
+                            <td><i>Carol gosta de Giu ou Natanna.</i></td>
+                            <td style='display:none'>likes(carol,giu) | likes(carol,natanna)</td>
+                            <td id='3g' align='center'><img src="images/newredex.jpg"/></td>
+                          </tr>
+                          <tr>
+                            <td><i>Anna gosta de todos que Carol gosta.</i></td>
+                            <td style='display:none'>AY:(likes(carol,Y) => likes(anna,Y))</td>
+                            <td id='4g' align='center'><img src="images/newgreencheck.jpg"/></td>
+                          </tr>
+                          <tr>
+                            <td><i>Giu gosta de todos que gostam dela</i>
+                            </td><td style='display:none'>AY:(likes(Y,giu) => likes(giu,Y))</td>
+                            <td id='5g' align='center'><img src="images/newgreencheck.jpg"/></td>
+                          </tr>
+                          <tr>
+                            <td><i>Ninguém gosta de si mesma..</i></td>
+                            <td style='display:none'>AX:~likes(X,X)</td>
+                            <td id='6g' align='center'><img src="images/newgreencheck.jpg"/></td>
+                          </tr>
+                        </table>
+                      </center>
+
+                      <p style='margin:10px'>Tente tornar todas as frases verdadeiras. 
+                        Observe que existem várias maneiras de fazer isso.
+                      </p>
+
+                      <br/>
+                      <center>
+                        <button type="button"  class="btn btn-success" onclick="showanswers()">Mostrar respostas</button>
+                        <button type="button"  class="btn btn-danger" onclick="resetanswers()">Limpar Respostas</button>
+                      </center>
+                      <br>
+                      <center>
+                        <a type="button"  class="btn btn-success" href='Exercicio1_1.html'>Anterior</a>
+                      </center>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </center>
+          </td>
+        </tr>
+      </table>
+    </center> 
+  </body>
+</html>
