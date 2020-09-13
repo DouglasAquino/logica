@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Exercício 1.1 - Avaliação</title>
+    <script type='text/javascript'  src="javascript/Exercicio1_1_2.js"></script>
+  </head>
+
+  <body style='background-color:#93c9ff' >
+    <center>
+      <table width="1000" cellpadding="40" bgcolor="#ffffff">
+        <tbody>
+          <tr>
+            <td>
+              <center>
+                <span style="font-size:36px">Introdução à Lógica</span>
+              </center>
+              <br>
+
+              <center>
+                <table width="900" cellpadding="10" bgcolor="#93c9ff" border="1">
+                  <tbody>
+                    <tr><td align="center" style="font-size:19px">Exercício 1.1.2 - Avaliação</td></tr>
+                  </tbody>
+                </table>
+              </center>
+
+              <br>
+              <center>
+                <table width="900" cellspacing="0" cellpadding="0" border="0">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p>Leonardo está recrutando jogadores para seu pequeno time de futebol. Ele recebeu recebeu quatro jogadores para uma peneira e  análise de habilidades: 
+                        Pedro, Odali, Victor e Samuel. As habilidades principais de cada candidato Leonardo anotou em uma tabela, 
+                        para analisar quem deve contratar. A tabela a seguir apresenta as habilidades. Uma marcação em uma caixa da tabela indica que o jogador é bom naquele quesito; 
+                        a ausência da marcação significa que ele não é.
+                        </p>
+
+                        <center>
+                          <table border="1.1" bgcolor="#d7ffae">
+                            <tbody>
+                              <tr height="50" style="background-color:#93c9ff" align="center">
+                                <th width="50"><img src="images/rede.png"></th>
+                                <th width="50">Passe</th>
+                                <th width="50">Controle</th>
+                                <th width="50">Condução</th>
+                                <th width="50">Desarme</th>
+                                <th width="50">Drible</th>
+                                <th width="50">Cabeceio</th>
+                                <th width="50">Finalização</th>
+                              </tr>
+                              <tr height="50" align="center">
+                                <th style="background-color:#93c9ff">Pedro</th>
+                                <td id="aa" align="center" valign="center">&nbsp;</td>
+                                <td id="ab" align="center" valign="center"><img src="images/bola.png"></td>
+                                <td id="ac" align="center" valign="center"><img src="images/bola.png"></td>
+                                <td id="ad" align="center" valign="center">&nbsp;</td>
+                                <td id="ae" align="center" valign="center"><img src="images/bola.png"></td>
+                                <td id="af" align="center" valign="center">&nbsp;</td>
+                                <td id="ag" align="center" valign="center">&nbsp;</td>
+                              </tr>
+                              <tr height="50" align="center">
+                                <th style="background-color:#93c9ff">Odali</th>
+                                <td id="ba" align="center" valign="center"><img src="images/bola.png"></td>
+                                <td id="bb" align="center" valign="center">&nbsp;</td>
+                                <td id="bc" align="center" valign="center"><img src="images/bola.png"></td>
+                                <td id="bd" align="center" valign="center"><img src="images/bola.png"></td>
+                                <td id="be" align="center" valign="center">&nbsp;</td>
+                                <td id="bf" align="center" valign="center"><img src="images/bola.png"></td>
+                                <td id="bg" align="center" valign="center">&nbsp;</td>
+                              </tr>
+                              <tr height="50" align="center">
+                                <th style="background-color:#93c9ff">Victor</th>
+                                <td id="ca" align="center" valign="center"><img src="images/bola.png"></td>
+                                <td id="cb" align="center" valign="center"><img src="images/bola.png"></td>
+                                <td id="cc" align="center" valign="center">&nbsp;</td>
+                                <td id="cd" align="center" valign="center"><img src="images/bola.png"></td>
+                                <td id="ce" align="center" valign="center"><img src="images/bola.png"></td>
+                                <td id="cf" align="center" valign="center">&nbsp;</td>
+                                <td id="cg" align="center" valign="center"><img src="images/bola.png"></td>
+                              </tr>
+                              <tr height="50" align="center">
+                                <th style="background-color:#93c9ff">Samuel</th>
+                                <td id="da" align="center" valign="center">&nbsp;</td>
+                                <td id="db" align="center" valign="center"><img src="images/bola.png"></td>
+                                <td id="dc" align="center" valign="center"><img src="images/bola.png"></td>
+                                <td id="dd" align="center" valign="center">&nbsp;</td>
+                                <td id="de" align="center" valign="center">&nbsp;</td>
+                                <td id="df" align="center" valign="center">&nbsp;</td>
+                                <td id="dg" align="center" valign="center"><img src="images/bola.png"></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </center>
+
+                        <p style="margin:10px">As frases da tabela abaixo descrevem as habilidades que Leonardo notou
+                         nos candidatos, 
+                          com uma indicação se são verdadeiras ou falsas no mundo retratado na primeira tabela.
+                          Para cada uma das sentenças, diga se é verdadeira ou falsa no mundo ilustrado acima.
+                        </p>
+
+                        <center>
+                          <table id="theory" cellspacing="0" cellpadding="5" border="0" bgcolor="#d7ffae">
+                            <tbody>
+                              <tr>
+                                <td><i>Pedro ou Odali possuem a habilidade de cabeceio.</i></td>
+                                <td>
+                                <select id="a" onchange="respostas()" style="background-color:#93c9ff">
+                                  <option></option>
+                                  <option style="color:green">verdade</option>
+                                  <option style="color:red">falso</option>
+                                </select>
+                                </td>
+                                <td id="ah" width="25"></td>
+                              </tr>
+
+                              <tr>
+                                <td><i>Não é verdade que Victor possui mais habilidades.</i></td>
+                                <td>
+                                  <select id="b" onchange="respostas()" style="background-color:#93c9ff">
+                                    <option></option>
+                                    <option style="color:green">verdade</option>
+                                    <option style="color:red">falso</option>
+                                  </select>
+                                </td>
+                                <td id="bh" width="25"></td>
+                              </tr>
+
+                              <tr>
+                                <td><i>Samuel domina o drible e o cabeceio.</i></td>
+                                <td>
+                                  <select id="c" onchange="respostas()" style="background-color:#93c9ff">
+                                    <option></option>
+                                    <option style="color:green">verdade</option>
+                                    <option style="color:red">falso</option>
+                                  </select>
+                                </td>
+                                <td id="ch" width="25"></td>
+                              </tr>
+
+                              <tr>
+                                <td><i>Pelo menos um candidato é bom no passe.</i></td>
+                                <td>
+                                  <select id="d" onchange="respostas()" style="background-color:#93c9ff">
+                                    <option></option>
+                                    <option style="color:green">verdade</option>
+                                    <option style="color:red">falso</option>
+                                  </select>
+                                </td>
+                                <td id="dh" width="20"></td>
+                              </tr>
+                              <tr>
+                                <td><i>Alguém domina todas as habilidades.</i></td>
+                                <td>
+                                  <select id="e" onchange="respostas()" style="background-color:#93c9ff">
+                                    <option ></option>
+                                    <option style="color:green">verdade</option>
+                                    <option style="color:red">falso</option>
+                                  </select>
+                                </td>
+                                <td id="eh" width="20"></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </center>
+                        <br>
+                        <center>
+                            <button type="button"  class="btn btn-success" onclick="gabarito()">Mostrar respostas</button>
+                            <button type="button" class="btn btn-danger" onclick="limpar()">Limpar Respostas</button>
+                        </center>
+                        <br>
+
+                        <center>
+                            <a type="button"  class="btn btn-success" href='Exercicio1_1.html'>Anterior</a>
+                            <a type="button"  class="btn btn-success" href='Exercicio1_2.html'>Proximo</a>
+                        
+                            
+                        </center>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </center>
+  </body>
+</html>
